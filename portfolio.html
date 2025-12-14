@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">My Portfolio</div>
+    <div class="nav-right">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#competitions">Competitions</a>
+      <a href="#interests">Interests</a>
+      <button id="theme-toggle">🌙</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="about" class="section alt">
+      <h1>About Me</h1>
+      <div class="about-container">
+        <img
+          src="me.jpg"
+          alt="photo of me"
+          class ="about-photo"
+        />
+        <div class="about-text">
+          <p class="wording">
+            Hi, I am Lo Shao Kai from River Valley High School.
+            I love physics and maths. During my free time I like to do one of three things: exercise, game or learn random things.
+            Another fun fact about me is that I like travelling and spontaneousity, I enjoy company and exploring new things.
+            Sometimes when I am bored I do coding projects like this portfolio site.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section alt">
+      <h1>Projects</h1>
+      <ul class="card-list">
+        <li class="card">GitHub Portfolio Website
+            <p>Built a personal portfolio with light/dark mode, smooth scrolling, and responsive design.</p>
+            <p class="second-line">Tech stack: HTML, CSS, JavaScript.</p>
+        </li>
+        <li class="card">SYPT &#8212; Singapore Young Physicist's Tournament
+          <p>
+            Planned a simulated sports competition as part of a mathematical modelling competition and incorporated coding to analyze results and support predictions.</p>
+          <p class="second-line">Outcome: Gained hands-on experience in experimental physics and technical writing.</p>
+        </li>
+        <li class="card">IMMC &#8212; International Mathematical Modelling Competitions
+          <p>Planned a simulated sports competition as part of a mathematical modelling competitio and incorporated coding to analyze results and support predictions.</p>
+          <p class="second-line">Outcome: Awarded Distinct for clear modelling and innovative approach.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="competitions" class="section">
+      <h1>Competitions</h1>
+      <p class="box" >
+        <span class="emoji">🏆</span> Singapore Junior Biology Olympiad &#8212; Gold(2025) <br>
+        <span class="emoji">🥈</span> Singapore Junior Physics Olympiad &#8212; Bronze(2024), Sliver(2025) <br>
+        <span class="emoji">🥉</span> Singapore Junior Chemistry Olympiad &#8212; Bronze(2025) <br>
+        <span class="emoji">🥉</span> Singapore Math Olympiad (Senior) &#8212; Bronze(2024,2025) <br>
+        <span class="emoji">🥉</span> Singapore Math Olympiad (Open) &#8212; HM(2025) <br>
+        <span class="emoji">🥉</span> NOI &#8212; Participation(2025) <br>
+        <span class="emoji">🥉</span> Singapore Young Physicist Tournament &#8212; Bronze(2025) <br>
+        <span class="emoji">🥈</span> International Space Challenge &#8212; Merit (2025) <br>
+        <span class="emoji">🏆</span> International Mathematical Modelling Competition &#8212; Distinction(2025) <br>
+        <span class="emoji">🥈</span> Illustratum: A Hallway Physics Competition &#8212; Merit <br>
+        <span class="emoji">🥉</span> Singapore Physics League &#8212; Merit(2024), Bronze(2025) <br>
+        <span class="emoji">🥉</span> Singapore Math Olympiad &#8212; Bronze(2022) <br>
+        <span class="emoji">🥈</span> NSG Wushu B Division 2nd(2025)
+      </p>
+    </section>
+
+    <section id="interests" class="section">
+      <h1>Interests</h1>
+      <p class="wording">
+        I am interested in aviation and understanding how physics governs movemnet in the air.
+        I also enjoy studying how theoretical ideas can be translated into real world systems.
+        Outside of academics, I like to exercise regularly to stay fit.
+      </p>
+    </section>
+  </main>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>

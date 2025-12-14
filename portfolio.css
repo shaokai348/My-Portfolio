@@ -1,0 +1,160 @@
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --card: #f5f5f7;
+  --nav: rgba(255, 255, 255, 0.8);
+}
+
+body.dark {
+  --bg: #0f0f10;
+  --text: #f5f5f7;
+  --muted: #a1a1a6;
+  --card: #1c1c1e;
+  --nav: rgba(28, 28, 30, 0.8);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  backdrop-filter: blur(16px);
+  background-color: var(--nav);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.nav-right a {
+  margin-right: 16px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.nav-right a:hover {
+  opacity: 0.8;
+}
+
+#theme-toggle {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+main {
+  padding-top: 80px;
+}
+
+.section {
+  max-width: 900px;
+  margin-bottom: 200px;
+  padding: 20px 24px;
+}
+
+.section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.section p {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.section.alt {
+  background-color: var(--card);
+  border-radius: 24px;
+  box-shadow: rgb(0, 63, 180, 1);
+}
+
+.card-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background-color: var(--bg);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(116, 0, 0, 0.418);
+  font-weight: 500;
+}
+
+.achievements{
+  margin-right: 15px;
+  font-size: 1.2em;
+}
+
+.about-container{
+  background-color: var(--card);
+  border-radius: 40px;
+  display: flex;
+  gap: 32px;
+  align-items: top;
+}
+
+.about-photo{
+  width: 220px;
+  max-width: 100%;
+  border-radius: 40px;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(116, 0, 0, 0.418);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.wording{
+  font-weight: bolder;
+}
+
+.project-photo{
+  width: 100px;
+  max-width: 100%;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.second-line{
+  margin-top: 24px;
+}
+
+.emoji {
+  margin: 18px;
+  font-size: 1.2em;
+}
+
+.box {
+  margin-top: 24px;
+  background-color: var(--bg);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(116, 0, 0, 0.418);
+  font-weight: 500;
+}
