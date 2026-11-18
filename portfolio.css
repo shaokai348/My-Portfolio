@@ -1,0 +1,313 @@
+/* ---------- Theme tokens (dark is the default) ---------- */
+:root,
+body.dark {
+  --bg: #0d0e12;
+  --surface: #16181f;
+  --card: #1d2029;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #f2f3f7;
+  --muted: #a3a8b8;
+  --accent: #7c9cff;
+  --accent-soft: rgba(124, 156, 255, 0.14);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --nav: rgba(13, 14, 18, 0.75);
+}
+
+body.light {
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --border: rgba(15, 20, 40, 0.08);
+  --text: #12141a;
+  --muted: #5b6172;
+  --accent: #3b5bdb;
+  --accent-soft: rgba(59, 91, 219, 0.1);
+  --shadow: 0 10px 30px rgba(20, 30, 60, 0.08);
+  --nav: rgba(246, 247, 251, 0.8);
+}
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* so nav links don't hide headings under the navbar */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 28px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: var(--nav);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+}
+
+.nav-left {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 999px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-right a:hover {
+  color: var(--text);
+  background-color: var(--accent-soft);
+}
+
+#theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 16px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  margin-left: 6px;
+  transition: transform 0.2s ease;
+}
+
+#theme-toggle:hover {
+  transform: rotate(20deg) scale(1.05);
+}
+
+/* ---------- Layout ---------- */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 100px 24px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.section {
+  padding: 32px;
+  border-radius: 24px;
+}
+
+.section.alt {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.section h1::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin-top: 8px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.section p {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* ---------- About ---------- */
+.about-container {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.about-photo {
+  width: 220px;
+  max-width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  flex-shrink: 0;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.wording {
+  font-weight: 500;
+}
+
+/* ---------- Project cards ---------- */
+.card-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.card p {
+  font-weight: 400;
+  font-size: 0.97rem;
+  margin-top: 10px;
+}
+
+.second-line {
+  margin-top: 14px !important;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+/* ---------- Competitions ---------- */
+.box {
+  list-style: none;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 8px 0;
+}
+
+.box li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 22px;
+  color: var(--text);
+}
+
+.box li + li {
+  border-top: 1px solid var(--border);
+}
+
+.box li span.result {
+  margin-left: auto;
+  color: var(--muted);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.emoji {
+  font-size: 1.25em;
+  width: 1.5em;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 16px;
+  }
+
+  .nav-right {
+    justify-content: center;
+    gap: 2px;
+    flex-wrap: nowrap;
+  }
+
+  .nav-right a {
+    padding: 4px 7px;
+    font-size: 0.85rem;
+  }
+
+  #theme-toggle {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    margin-left: 2px;
+    flex-shrink: 0;
+  }
+
+  main {
+    padding-top: 110px;
+  }
+
+  html {
+    scroll-padding-top: 100px;
+  }
+
+  .section {
+    padding: 22px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box li {
+    display: grid;
+    grid-template-columns: 1.5em 1fr;
+    column-gap: 12px;
+    row-gap: 2px;
+    padding: 12px 18px;
+  }
+
+  .box li .emoji {
+    grid-row: span 2;
+  }
+
+  .box li span.result {
+    grid-column: 2;
+    margin-left: 0;
+    text-align: left;
+    white-space: normal;
+    font-size: 0.92rem;
+  }
+}

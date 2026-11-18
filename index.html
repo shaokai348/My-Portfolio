@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">My Portfolio</div>
+    <div class="nav-right">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#competitions">Competitions</a>
+      <a href="#interests">Interests</a>
+      <button id="theme-toggle" aria-label="Toggle light/dark mode">☀️</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="about" class="section alt">
+      <h1>About Me</h1>
+      <div class="about-container">
+        <img
+          src="me.jpg"
+          alt="photo of me"
+          class="about-photo"
+        />
+        <div class="about-text">
+          <p class="wording">
+            Hi, I am Lo Shao Kai from River Valley High School.
+            I love physics and maths. During my free time I like to do one of three things: exercise, game or learn random things.
+            Another fun fact about me is that I like travelling and spontaneousity, I enjoy company and exploring new things.
+            Sometimes when I am bored I do coding projects like this portfolio site.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section alt">
+      <h1>Projects</h1>
+      <ul class="card-list">
+        <li class="card">SIMC &#8212; Singapore International Mathematics Challenge
+          <p>Taught myself linear algebra to tackle a team modelling challenge, using matrix methods and code to analyse the data, then presented our approach and findings to an NUS professor.</p>
+          <p class="second-line">Outcome: Awarded Merit (2026).</p>
+        </li>
+        <li class="card">SYPT &#8212; Singapore Young Physicist's Tournament
+          <p>
+            Planned a simulated sports competition as part of a mathematical modelling competition and incorporated coding to analyze results and support predictions.</p>
+          <p class="second-line">Outcome: Gained hands-on experience in experimental physics and technical writing.</p>
+        </li>
+        <li class="card">IMMC &#8212; International Mathematical Modelling Competitions
+          <p>Planned a simulated sports competition as part of a mathematical modelling competition and incorporated coding to analyze results and support predictions.</p>
+          <p class="second-line">Outcome: Awarded Distinction (2025, 2026) for clear modelling and innovative approach.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="competitions" class="section">
+      <h1>Competitions</h1>
+      <ul class="box">
+        <li><span class="emoji">🏆</span> Singapore Junior Biology Olympiad <span class="result">Gold (2025)</span></li>
+        <li><span class="emoji">🥈</span> Singapore Junior Physics Olympiad <span class="result">Bronze (2024), Silver (2025)</span></li>
+        <li><span class="emoji">🥉</span> Singapore Junior Chemistry Olympiad <span class="result">Bronze (2025)</span></li>
+        <li><span class="emoji">🥉</span> Singapore Math Olympiad (Senior) <span class="result">Bronze (2024, 2025)</span></li>
+        <li><span class="emoji">🥉</span> Singapore Math Olympiad (Open) <span class="result">HM (2025), Bronze (2026)</span></li>
+        <li><span class="emoji">🥈</span> Singapore International Mathematics Challenge <span class="result">Merit (2026)</span></li>
+        <li><span class="emoji">🥉</span> NOI <span class="result">Participation (2025)</span></li>
+        <li><span class="emoji">🥉</span> Singapore Young Physicist Tournament <span class="result">Bronze (2025)</span></li>
+        <li><span class="emoji">🥈</span> International Space Challenge <span class="result">Merit (2025)</span></li>
+        <li><span class="emoji">🏆</span> International Mathematical Modelling Competition <span class="result">Distinction (2025, 2026)</span></li>
+        <li><span class="emoji">🥈</span> Illustratum: A Hallway Physics Competition <span class="result">Merit</span></li>
+        <li><span class="emoji">🥉</span> Singapore Physics League <span class="result">Merit (2024), Bronze (2025)</span></li>
+        <li><span class="emoji">🥉</span> Singapore Math Olympiad <span class="result">Bronze (2022)</span></li>
+        <li><span class="emoji">🥈</span> NSG Wushu B Division <span class="result">2nd (2025)</span></li>
+      </ul>
+    </section>
+
+    <section id="interests" class="section">
+      <h1>Interests</h1>
+      <p class="wording">
+        I am interested in aviation and understanding how physics governs movement in the air.
+        I also enjoy studying how theoretical ideas can be translated into real world systems.
+        Outside of academics, I like to exercise regularly to stay fit.
+      </p>
+    </section>
+  </main>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>
